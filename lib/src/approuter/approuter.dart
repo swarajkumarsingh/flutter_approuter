@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_approuter/src/messages/messages.dart';
+import 'package:flutter_approuter/src/approuter/approuter_platform_interface.dart';
 
-final navigatorKey = GlobalKey<NavigatorState>();
+final appRouter = _AppRouter();
 
 // Step 1: MaterialApp(
 // navigatorKey: navigatorKey,
 
-// Usage --> () => AppRouter.pushNamed("/home-screen")
-
-final appRouter = _AppRouter();
+// Usage --> () => appRouter.push(HomeScreen());
 
 class _AppRouter {
   /// [push]
@@ -26,13 +24,7 @@ class _AppRouter {
   /// push(HomeScreen());
   /// ```
   void push(Widget page) {
-    try {
-      navigatorKey.currentState?.push(
-        MaterialPageRoute(builder: (_) => page),
-      );
-    } catch (e, stackTrace) {
-      message.throwError(e: e, stackTrace: stackTrace);
-    }
+    AppRouterPlatform.instance.push(page);
   }
 
   /// [pushOffAll]
@@ -50,14 +42,7 @@ class _AppRouter {
   /// push(HomeScreen());
   /// ```
   void pushOffAll(Widget page) {
-    try {
-      navigatorKey.currentState?.pushAndRemoveUntil(
-        MaterialPageRoute(builder: (_) => page),
-        (Route<dynamic> route) => false,
-      );
-    } catch (e, stackTrace) {
-      message.throwError(e: e, stackTrace: stackTrace);
-    }
+    AppRouterPlatform.instance.pushOffAll(page);
   }
 
   /// [pushNamed]
@@ -75,11 +60,7 @@ class _AppRouter {
   /// pushNamed(HomeScreen());
   /// ```
   void pushNamed(String routeName) {
-    try {
-      navigatorKey.currentState?.pushNamed(routeName);
-    } catch (e, stackTrace) {
-      message.throwError(e: e, stackTrace: stackTrace);
-    }
+    AppRouterPlatform.instance.pushNamed(routeName);
   }
 
   /// [pop]
@@ -97,10 +78,6 @@ class _AppRouter {
   /// pop(HomeScreen());
   /// ```
   void pop() {
-    try {
-      navigatorKey.currentState?.pop();
-    } catch (e, stackTrace) {
-      message.throwError(e: e, stackTrace: stackTrace);
-    }
+    AppRouterPlatform.instance.pop();
   }
 }

@@ -7,4 +7,7 @@
 * Added package functionalities(**push, pushNamed, pop, pushOffAll**)
 
 ## 1.0.1
-* Re-structured the folders and files
+* Updated Readme.md
+
+## 2.0.0
+* Re-structured the folders and files, also made changes in example folder

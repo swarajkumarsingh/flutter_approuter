@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_approuter/flutter_approuter.dart';
 
 import 'package:flutter_approuter/src/messages/messages.dart';
 import 'package:flutter_approuter/src/approuter/approuter_platform_interface.dart';
-
-final navigatorKey = GlobalKey<NavigatorState>();
 
 class MethodChannelAppRouter extends AppRouterPlatform {
   @override

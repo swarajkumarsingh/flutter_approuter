@@ -3,6 +3,8 @@ import 'package:flutter_approuter/src/approuter/approuter_platform_interface.dar
 
 final appRouter = _AppRouter();
 
+final navigatorKey = GlobalKey<NavigatorState>();
+
 // Step 1: MaterialApp(
 // navigatorKey: navigatorKey,
 

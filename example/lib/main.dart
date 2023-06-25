@@ -11,6 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      /// [navigatorKey] make sure to add navigatorKey, else appRouter will not work.
+      navigatorKey: navigatorKey,
       title: 'Flutter Approuter demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
@@ -37,7 +39,7 @@ class HomePage extends StatelessWidget {
             /// [appRouter.push(Widget page)] - push navigate without context
             appRouter.push(const SecondPage());
           },
-          child: const Icon(Icons.forward),
+          child: const Icon(Icons.forward), 
         ),
       ),
     );

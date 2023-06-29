@@ -7,6 +7,17 @@ import 'package:flutter_approuter/src/approuter/approuter_platform_interface.dar
 class MethodChannelAppRouter extends AppRouterPlatform {
   @override
   @visibleForTesting
+  BuildContext? getContext() {
+    try {
+      return navigatorKey.currentState?.context;
+    } catch (e, stackTrace) {
+      message.throwError(e: e, stackTrace: stackTrace);
+    }
+    return null;
+  }
+
+  @override
+  @visibleForTesting
   void push(Widget page) {
     try {
       navigatorKey.currentState?.push(

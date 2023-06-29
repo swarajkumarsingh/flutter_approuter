@@ -11,3 +11,6 @@
 
 ## 2.0.0
 * Re-structured the folders and files, also made changes in example folder
+
+## 3.0.0
+* Get Context function added

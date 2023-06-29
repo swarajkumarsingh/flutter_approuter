@@ -13,7 +13,7 @@ final navigatorKey = GlobalKey<NavigatorState>();
 class _AppRouter {
   /// [push]
   ///
-  /// [Description]: Push to different screen without BuildContext
+  /// [Description]: [push] to different screen without BuildContext
   ///
   /// [Parameters]:
   /// - [Widget page]: Page to push
@@ -31,7 +31,7 @@ class _AppRouter {
 
   /// [pushOffAll]
   ///
-  /// [Description]: pushOffAll to different screen without BuildContext
+  /// [Description]: [pushOffAll] to different screen without BuildContext
   ///
   /// [Parameters]:
   /// - [Widget page]: Page to pushOffAll
@@ -47,9 +47,25 @@ class _AppRouter {
     AppRouterPlatform.instance.pushOffAll(page);
   }
 
+  /// [getContext]
+  ///
+  /// [Description]: [getContext] to different screen without BuildContext
+  ///
+  /// [Parameters]: null
+  ///
+  /// [Return Value]: BuildContext
+  ///
+  /// [Example Usage]:
+  /// ```dart
+  /// BuildContext context = appRouter.getContext();
+  /// ```
+  BuildContext? getContext() {
+    return AppRouterPlatform.instance.getContext();
+  }
+
   /// [pushNamed]
   ///
-  /// [Description]: pushNamed to different screen without BuildContext
+  /// [Description]: [pushNamed] to different screen without BuildContext
   ///
   /// [Parameters]:
   /// - [Widget page]: Page to pushNamed
@@ -67,7 +83,7 @@ class _AppRouter {
 
   /// [pop]
   ///
-  /// [Description]: pop screen (jump back to previous screen)
+  /// [Description]: [pop] screen (jump back to previous screen)
   ///
   /// [Parameters]:
   /// - [Widget page]: Page to pop

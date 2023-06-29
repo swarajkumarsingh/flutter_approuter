@@ -14,6 +14,10 @@ abstract class AppRouterPlatform {
   /// platform-specific class that extends [AppRouterPlatform] when
   /// they register themselves.
 
+  BuildContext? getContext() {
+    throw UnimplementedError('pop() has not been implemented.');
+  }
+
   void push(Widget page) {
     throw UnimplementedError('push() has not been implemented.');
   }

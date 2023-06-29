@@ -34,14 +34,27 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            /// [appRouter.push(Widget page)] - push navigate without context
-            appRouter.push(const SecondPage());
-          },
-          child: const Icon(Icons.forward), 
-        ),
-      ),
+          child: Column(
+        children: [
+          ElevatedButton.icon(
+            onPressed: () {
+              /// [appRouter.push(Widget page)] - push navigate without context
+              appRouter.push(const SecondPage());
+            },
+            icon: const Icon(Icons.forward),
+            label: const Text("Navigate to second page"),
+          ),
+          ElevatedButton.icon(
+            onPressed: () {
+              /// [appRouter.getContext()] - get context without before page Builds
+              BuildContext context = appRouter.getContext()!;
+              print(context.size);
+            },
+            icon: const Icon(Icons.gamepad),
+            label: const Text("Get Context"),
+          ),
+        ],
+      )),
     );
   }
 }

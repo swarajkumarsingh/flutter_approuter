@@ -37,30 +37,36 @@ import 'package:flutter_approuter/flutter_approuter.dart';
 ## Features
 
 - [x] Custom appRouter **without BuiltContext**
+
   - [x] push
   - [x] pushOffAll
   - [x] pushNamed
   - [x] pop
 
+- [x] Get Context on initMethod also outside of page
+  - [x] getContext
+
 ## Example
 
 ### AppRouter **without BuildContext**
 
-#
-
-1. Push(Page)
+1. getContext()
+   ```
+       appRouter.getContext();
+   ```
+2. Push(Page)
    ```
        appRouter.push(HomeScreen());
    ```
-2. Pop()
+3. Pop()
    ```
        appRouter.pop();
    ```
-3. pushNamed(String route)
+4. pushNamed(String route)
    ```
        appRouter.pushNamed(route);
    ```
-4. pushOffAll(Widget page)
+5. pushOffAll(Widget page)
    ```
        appRouter.pushOffAll(page);
    ```

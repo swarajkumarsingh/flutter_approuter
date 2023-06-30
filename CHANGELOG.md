@@ -14,3 +14,6 @@
 
 ## 3.0.0
 * Get Context function added
+
+## 3.0.1
+* Removed unnecessary dependency

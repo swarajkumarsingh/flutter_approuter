@@ -22,7 +22,19 @@ abstract class AppRouterPlatform {
     throw UnimplementedError('push() has not been implemented.');
   }
 
-  void pushOffAll(Widget page) {
+  void pushAndRemoveUntil(Widget page) {
+    throw UnimplementedError('pushOffAll() has not been implemented.');
+  }
+
+  void pushReplacement(Widget page) {
+    throw UnimplementedError('pushOffAll() has not been implemented.');
+  }
+
+  void pushReplacementNamed(String route) {
+    throw UnimplementedError('pushOffAll() has not been implemented.');
+  }
+  
+  void pushNamedAndRemoveUntil(String route) {
     throw UnimplementedError('pushOffAll() has not been implemented.');
   }
 

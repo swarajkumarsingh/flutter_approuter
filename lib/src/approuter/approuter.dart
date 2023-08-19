@@ -43,8 +43,26 @@ class _AppRouter {
   /// ```dart
   /// push(HomeScreen());
   /// ```
-  void pushOffAll(Widget page) {
-    AppRouterPlatform.instance.pushOffAll(page);
+  void pushAndRemoveUntil(Widget page) {
+    AppRouterPlatform.instance.pushAndRemoveUntil(page);
+  }
+
+  /// [pushOffAll]
+  ///
+  /// [Description]: [pushOffAll] to different screen without BuildContext
+  ///
+  /// [Parameters]:
+  /// - [Widget page]: Page to pushOffAll
+  ///    ...
+  ///
+  /// [Return Value]: null
+  ///
+  /// [Example Usage]:
+  /// ```dart
+  /// push(HomeScreen());
+  /// ```
+  void pushNamedAndRemoveUntil(String route) {
+    AppRouterPlatform.instance.pushNamedAndRemoveUntil(route);
   }
 
   /// [getContext]

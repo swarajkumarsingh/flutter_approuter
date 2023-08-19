@@ -30,12 +30,47 @@ class MethodChannelAppRouter extends AppRouterPlatform {
 
   @override
   @visibleForTesting
-  void pushOffAll(Widget page) {
+  void pushAndRemoveUntil(Widget page) {
     try {
       navigatorKey.currentState?.pushAndRemoveUntil(
         MaterialPageRoute(builder: (_) => page),
         (Route<dynamic> route) => false,
       );
+    } catch (e, stackTrace) {
+      message.throwError(e: e, stackTrace: stackTrace);
+    }
+  }
+
+  @override
+  @visibleForTesting
+  void pushNamedAndRemoveUntil(String route) {
+    try {
+      navigatorKey.currentState?.pushNamedAndRemoveUntil(
+        route,
+        (Route<dynamic> route) => false,
+      );
+    } catch (e, stackTrace) {
+      message.throwError(e: e, stackTrace: stackTrace);
+    }
+  }
+
+  @override
+  @visibleForTesting
+  void pushReplacement(Widget page) {
+    try {
+      navigatorKey.currentState?.pushReplacement(MaterialPageRoute(
+        builder: (context) => page,
+      ));
+    } catch (e, stackTrace) {
+      message.throwError(e: e, stackTrace: stackTrace);
+    }
+  }
+
+  @override
+  @visibleForTesting
+  void pushReplacementNamed(String route) {
+    try {
+      navigatorKey.currentState?.pushReplacementNamed(route);
     } catch (e, stackTrace) {
       message.throwError(e: e, stackTrace: stackTrace);
     }

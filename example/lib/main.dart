@@ -78,8 +78,8 @@ class SecondPage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            /// [appRouter.pushOffAll(Widget page)] - pushOffAll navigate without context
-            appRouter.pushOffAll(const HomePage());
+            /// [appRouter.pushAndRemoveUntil(Widget page)] - pushAndRemoveUntil navigate without context
+            appRouter.pushAndRemoveUntil(const HomePage());
           },
           child: const Icon(Icons.keyboard_backspace_rounded),
         ),

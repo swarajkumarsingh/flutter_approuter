@@ -43,7 +43,7 @@ class MethodChannelAppRouter extends AppRouterPlatform {
 
   @override
   @visibleForTesting
-  void pushNamedAndRemoveUntil(String route, [Object? arguments]) {
+  void pushNamedAndRemoveUntil(String route, {Object? arguments}) {
     try {
       navigatorKey.currentState?.pushNamedAndRemoveUntil(
         route,
@@ -69,7 +69,7 @@ class MethodChannelAppRouter extends AppRouterPlatform {
 
   @override
   @visibleForTesting
-  void pushReplacementNamed(String route, [Object? arguments]) {
+  void pushReplacementNamed(String route, {Object? arguments}) {
     try {
       navigatorKey.currentState?.pushReplacementNamed(route, arguments: arguments);
     } catch (e, stackTrace) {
@@ -79,7 +79,7 @@ class MethodChannelAppRouter extends AppRouterPlatform {
 
   @override
   @visibleForTesting
-  void pushNamed(String routeName, [Object? arguments]) {
+  void pushNamed(String routeName, {Object? arguments}) {
     try {
       navigatorKey.currentState?.pushNamed(routeName, arguments: arguments);
     } catch (e, stackTrace) {

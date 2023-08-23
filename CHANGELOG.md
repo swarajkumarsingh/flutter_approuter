@@ -36,3 +36,9 @@
     - pushNamed
     - pushReplacementNamed
     - pushNamedAndRemoveUntil
+
+## 3.0.5
+* Implemented named parameters for arguments value in :-
+    - pushNamed
+    - pushReplacementNamed
+    - pushNamedAndRemoveUntil

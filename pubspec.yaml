@@ -1,6 +1,6 @@
 name: flutter_approuter
 description: Navigation made easy, now navigate to screens, without BuildContext from pure flutter & dart code.
-version: 3.0.4
+version: 3.0.5
 homepage: https://github.com/swarajkumarsingh/flutter_approuter
 
 environment:

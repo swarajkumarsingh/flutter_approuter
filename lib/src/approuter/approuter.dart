@@ -29,8 +29,25 @@ class _AppRouter {
     AppRouterPlatform.instance.push(page);
   }
 
-  /// [pushOffAll]
+  /// [pushNamed]
   ///
+  /// [Description]: [pushNamed] to different screen without BuildContext
+  ///
+  /// [Parameters]:
+  /// - [Widget page]: Page to pushNamed
+  ///    ...
+  ///
+  /// [Return Value]: null
+  ///
+  /// [Example Usage]:
+  /// ```dart
+  /// pushNamed(HomeScreen());
+  /// ```
+  void pushNamed(String routeName, {Object? arguments}) {
+    AppRouterPlatform.instance.pushNamed(routeName, arguments: arguments);
+  }
+
+  /// [pushOffAll]}  ///
   /// [Description]: [pushOffAll] to different screen without BuildContext
   ///
   /// [Parameters]:
@@ -65,24 +82,6 @@ class _AppRouter {
     AppRouterPlatform.instance.pushReplacement(page);
   }
 
-  /// [pushReplacementNamed]
-  ///
-  /// [Description]: [pushReplacementNamed] Replace the current route of the navigator by pushing the given route and then disposing the previous route once the new route has finished animating in.
-  ///
-  /// [Parameters]:
-  /// - [Widget page]: Page to [pushReplacementNamed]
-  ///    ...
-  ///
-  /// [Return Value]: null
-  ///
-  /// [Example Usage]:
-  /// ```dart
-  /// push(HomeScreen());
-  /// ```
-  void pushReplacementNamed(String route, [Object? arguments]) {
-    AppRouterPlatform.instance.pushReplacementNamed(route, arguments);
-  }
-
   /// [pushOffAll]
   ///
   /// [Description]: [pushOffAll] to different screen without BuildContext
@@ -97,8 +96,28 @@ class _AppRouter {
   /// ```dart
   /// push(HomeScreen());
   /// ```
-  void pushNamedAndRemoveUntil(String route, [Object? arguments]) {
-    AppRouterPlatform.instance.pushNamedAndRemoveUntil(route, arguments);
+  void pushNamedAndRemoveUntil(String route, {Object? arguments}) {
+    AppRouterPlatform.instance
+        .pushNamedAndRemoveUntil(route, arguments: arguments);
+  }
+
+  /// [pushReplacementNamed]
+  ///
+  /// [Description]: [pushReplacementNamed] Replace the current route of the navigator by pushing the given route and then disposing the previous route once the new route has finished animating in.
+  ///
+  /// [Parameters]:
+  /// - [Widget page]: Page to [pushReplacementNamed]
+  ///    ...
+  ///
+  /// [Return Value]: null
+  ///
+  /// [Example Usage]:
+  /// ```dart
+  /// push(HomeScreen());
+  /// ```
+  void pushReplacementNamed(String route, {Object? arguments}) {
+    AppRouterPlatform.instance
+        .pushReplacementNamed(route, arguments: arguments);
   }
 
   /// [getContext]
@@ -115,24 +134,6 @@ class _AppRouter {
   /// ```
   BuildContext? getContext() {
     return AppRouterPlatform.instance.getContext();
-  }
-
-  /// [pushNamed]
-  ///
-  /// [Description]: [pushNamed] to different screen without BuildContext
-  ///
-  /// [Parameters]:
-  /// - [Widget page]: Page to pushNamed
-  ///    ...
-  ///
-  /// [Return Value]: null
-  ///
-  /// [Example Usage]:
-  /// ```dart
-  /// pushNamed(HomeScreen());
-  /// ```
-  void pushNamed(String routeName, [Object? arguments]) {
-    AppRouterPlatform.instance.pushNamed(routeName, arguments);
   }
 
   /// [pop]

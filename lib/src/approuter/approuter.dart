@@ -47,6 +47,42 @@ class _AppRouter {
     AppRouterPlatform.instance.pushAndRemoveUntil(page);
   }
 
+  /// [pushReplacement]
+  ///
+  /// [Description]: [pushReplacement] Replace the current route of the navigator by pushing the given route and then disposing the previous route once the new route has finished animating in.
+  ///
+  /// [Parameters]:
+  /// - [Widget page]: Page to pushReplacement
+  ///    ...
+  ///
+  /// [Return Value]: null
+  ///
+  /// [Example Usage]:
+  /// ```dart
+  /// push(HomeScreen());
+  /// ```
+  void pushReplacement(Widget page) {
+    AppRouterPlatform.instance.pushReplacement(page);
+  }
+
+  /// [pushReplacementNamed]
+  ///
+  /// [Description]: [pushReplacementNamed] Replace the current route of the navigator by pushing the given route and then disposing the previous route once the new route has finished animating in.
+  ///
+  /// [Parameters]:
+  /// - [Widget page]: Page to [pushReplacementNamed]
+  ///    ...
+  ///
+  /// [Return Value]: null
+  ///
+  /// [Example Usage]:
+  /// ```dart
+  /// push(HomeScreen());
+  /// ```
+  void pushReplacementNamed(String route, [Object? arguments]) {
+    AppRouterPlatform.instance.pushReplacementNamed(route, arguments);
+  }
+
   /// [pushOffAll]
   ///
   /// [Description]: [pushOffAll] to different screen without BuildContext
@@ -61,8 +97,8 @@ class _AppRouter {
   /// ```dart
   /// push(HomeScreen());
   /// ```
-  void pushNamedAndRemoveUntil(String route) {
-    AppRouterPlatform.instance.pushNamedAndRemoveUntil(route);
+  void pushNamedAndRemoveUntil(String route, [Object? arguments]) {
+    AppRouterPlatform.instance.pushNamedAndRemoveUntil(route, arguments);
   }
 
   /// [getContext]
@@ -95,8 +131,8 @@ class _AppRouter {
   /// ```dart
   /// pushNamed(HomeScreen());
   /// ```
-  void pushNamed(String routeName) {
-    AppRouterPlatform.instance.pushNamed(routeName);
+  void pushNamed(String routeName, [Object? arguments]) {
+    AppRouterPlatform.instance.pushNamed(routeName, arguments);
   }
 
   /// [pop]

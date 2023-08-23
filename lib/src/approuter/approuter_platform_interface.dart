@@ -30,15 +30,15 @@ abstract class AppRouterPlatform {
     throw UnimplementedError('pushOffAll() has not been implemented.');
   }
 
-  void pushReplacementNamed(String route) {
+  void pushReplacementNamed(String route, [Object? arguments]) {
     throw UnimplementedError('pushOffAll() has not been implemented.');
   }
   
-  void pushNamedAndRemoveUntil(String route) {
+  void pushNamedAndRemoveUntil(String route, [Object? arguments]) {
     throw UnimplementedError('pushOffAll() has not been implemented.');
   }
 
-  void pushNamed(String routeName) {
+  void pushNamed(String routeName, [Object? arguments]) {
     throw UnimplementedError('pushNamed() has not been implemented.');
   }
 

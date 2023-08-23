@@ -18,8 +18,21 @@
 ## 3.0.1
 * Removed unnecessary dependency
 ## 3.0.2
-* Added more navigation functions
+* Added blueprint for more navigation functions
     - pushReplacement
     - pushAndRemoveUntil
+    - pushReplacementNamed
+    - pushNamedAndRemoveUntil
+    
+## 3.0.3
+* Implemented more navigation functions
+    - pushReplacement
+    - pushAndRemoveUntil
+    - pushReplacementNamed
+    - pushNamedAndRemoveUntil
+
+## 3.0.4
+* Implemented arguments support which was missing earlier
+    - pushNamed
     - pushReplacementNamed
     - pushNamedAndRemoveUntil
